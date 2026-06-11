@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap to Sample-Efficient Real-World Reinforcement Learning Workshop (R2RL)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-brand">R2RL Workshop @ CoRL 2026</a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#callforpapers">Call for Papers</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#speakers">Speakers</a>
+                <a href="#organizers">Organizers</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Roadmap to Sample-Efficient Real-World Reinforcement Learning</h1>
+        <p class="hero-subtitle">What’s Standing Between Us and Real-World Deployment?</p>
+        <div class="hero-meta">
+            <span class="hero-badge">CoRL 2026 Workshop</span>
+            <span class="hero-badge">Austin, TX</span>
+            <span class="hero-badge">DATE HERE</span>
+        </div>
+    </header>
+
+    <section id="overview" class="overview">
+        <h2>Overview</h2>
+        <p>
+          Reinforcement learning (RL) has long promised autonomous, self-improving robots, yet a stubborn gap separates 
+          impressive simulation results from reliable real-world deployment. At the heart of that gap is <strong>sample efficiency</strong>: 
+          every trial on physical hardware requires both human supervision and wall-clock time. This workshop asks the community one focused question to address this challenge:
+          <strong>What problems preclude making RL algorithms sample-efficient enough for real-world deployment and what should we focus on over the next few years to solve them?</strong>
+        </p>
+        <p class="overview-followup">
+          Rather than simply showcasing finished results, R2RL is structured as a working session for the community. 
+          Attendees will propose and vote on open problems, join breakout discussions around the top-voted challenges, 
+          and openly discuss what has worked, what has failed, and what lessons were learned along the way. These live 
+          discussions will help shape a shared roadmap for sample-efficient real-world RL and will form the foundation 
+          of a post-workshop whitepaper, which the organizing committee will synthesize and release as a community.        </p>
+    </section>
+
+    <section id="callforpapers">
+        <h2>Call for Papers</h2>
+        <div class="cfp-layout">
+            <div class="cfp-main submission-content">
+            <h3>Topics of Interest</h3>
+            <p>
+                We welcome submissions on sample-efficient real-world RL, 
+                especially work that identifies practical bottlenecks, reports lessons learned from 
+                real-robot experiments, or proposes methods that reduce the cost of learning on hardware.
+                Topics of interest include, but are not limited to:
+            </p>
+            <ul>
+                <li>
+                    <strong>Supervision and Reward Cost:</strong> Methods for obtaining useful learning 
+                    signals cheaply, including learned reward models, human feedback, 
+                    human-in-the-loop interventions, and strategies for avoiding supervision as the bottleneck.
+                </li>
+                <li>
+                    <strong>Exploration and Safety on Hardware:</strong> Algorithms and systems for efficient 
+                    exploration under safety constraints, reset-free or autonomous RL, safe online 
+                    adaptation, and approaches that improve wall-clock efficiency during real-world training.
+                </li>
+                <li>
+                    <strong>Leveraging Priors for Real-World RL:</strong> Approaches that use pretrained policies, 
+                    VLAs, offline datasets, world models, or sim-to-real 
+                    transfer to reduce the number of required on-robot interactions.
+                </li>
+                <li>
+                    <strong>Post-Deployment Adaptation:</strong> Methods for finetuning deployed policies, 
+                    improving robustness to distribution shift, learning new behaviors from experience, and 
+                    adapting generalist policies without catastrophic forgetting.
+                </li>
+                <li>
+                    <strong>Long-Horizon and Contact-Rich RL:</strong> Techniques for improving sample efficiency 
+                    in long-horizon manipulation, dexterous control, contact-rich tasks, and settings with delayed 
+                    rewards, compounding errors, or difficult exploration.
+                </li>
+                <li>
+                    <strong>Benchmarks, Metrics, and Lessons Learned:</strong> Benchmarks, evaluation protocols, 
+                    shared platforms, negative results, system-level insights, and analysis of what worked, what 
+                    failed, and why in real-world RL experiments.
+                </li>
+            </ul>
+
+            <h3>Submission Guidelines</h3>
+            <ul>
+                <li><strong>Submission portal:</strong> all papers must be submitted through our <a href="#" class="link-text" target="_blank" rel="noopener">OpenReview portal</a>.</li>
+                <li><strong>Page limit:</strong> submissions should be 4–8 pages, excluding references and appendix.</li>
+                <li><strong>Format:</strong> submissions must follow the official <a href="#" class="link-text" target="_blank" rel="noopener">CoRL paper template and style</a>, and must be properly anonymized for double-blind review.</li>
+                <li><strong>Dual submission policy:</strong> we discourage work already accepted to the main CoRL 2026 conference. Accepted workshop papers will be listed on the website but are <strong>non-archival</strong> and will not appear in formal proceedings.</li>
+            </ul>
+
+            <h3>Spotlight Talks</h3>
+            <p>
+                All accepted papers will be presented at an in-person poster session. A small number
+                of selected papers will additionally give a 5-minute spotlight talk. Camera-ready versions 
+                of all accepted papers will be made available on the workshop website.
+            </p>
+            </div>
+
+            <aside class="cfp-sidebar">
+                <h3>Important Dates</h3>
+                <div class="date-item">
+                    <div class="date-label">Submission Deadline</div>
+                    <div class="date-value">DATE</div>
+                </div>
+                <div class="date-item">
+                    <div class="date-label">Notification</div>
+                    <div class="date-value">DATE</div>
+                </div>
+                <div class="date-item">
+                    <div class="date-label">Workshop Date</div>
+                    <div class="date-value">DATE</div>
+                </div>
+                <p class="date-note">All deadlines are <strong>Anywhere on Earth (AoE)</strong> time. Workshop is a half-day morning session.</p>
+                <a class="btn-submit" href="#" target="_blank" rel="noopener">Submit via OpenReview</a>
+            </aside>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <h2>Workshop Schedule (Tentative)</h2>
+        <p class="schedule-meta">Location: TBD, Austin, TX</p>
+        <p class="schedule-meta">Date: DAY HERE, DATE HERE (SESSION HERE)</p>
+        <table class="schedule-table">
+            <tbody>
+                <tr>
+                    <td>9:00 - 9:05</td>
+                    <td>Opening Remarks</td>
+                </tr>
+                <tr>
+                    <td>9:05 - 9:35</td>
+                    <td>Invited Talk 1</td>
+                </tr>
+                <tr>
+                    <td>9:35 - 10:05</td>
+                    <td>Invited Talk 2</td>
+                </tr>
+                <tr>
+                    <td>10:05 - 10:35</td>
+                    <td>Coffee Break and Poster Session</td>
+                </tr>
+                <tr>
+                    <td>10:35 - 11:05</td>
+                    <td>Invited Talk 3</td>
+                </tr>
+                <tr>
+                    <td>11:05 - 11:35</td>
+                    <td>Invited Talk 4</td>
+                </tr>
+                <tr>
+                    <td>11:35 - 11:50</td>
+                    <td>Spotlight Talks</td>
+                </tr>
+                <tr>
+                    <td>11:50 - 12:20</td>
+                    <td>Panel Discussion</td>
+                </tr>
+                <tr>
+                    <td>12:20 - 12:25</td>
+                    <td>Closing Remarks</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="speakers">
+        <h2>Speakers</h2>
+        <div class="speaker-list">
+            <div class="speaker-card">
+                <a class="speaker-photo" href="#" target="_blank" rel="noopener">
+                    <img src="image/1.jpg" alt="Speaker 1">
+                </a>
+                <div class="speaker-name">Speaker 1</div>
+                <div class="speaker-org">Organization 1</div>
+            </div>
+            <div class="speaker-card">
+                <a class="speaker-photo" href="#" target="_blank" rel="noopener">
+                    <img src="image/2.jpg" alt="Speaker 2">
+                </a>
+                <div class="speaker-name">Speaker 2</div>
+                <div class="speaker-org">Organization 2</div>
+            </div>
+            <div class="speaker-card">
+                <a class="speaker-photo" href="#" target="_blank" rel="noopener">
+                    <img src="image/3.jpg" alt="Speaker 3">
+                </a>
+                <div class="speaker-name">Speaker 3</div>
+                <div class="speaker-org">Organization 3</div>
+            </div>
+            <div class="speaker-card">
+                <a class="speaker-photo" href="#" target="_blank" rel="noopener">
+                    <img src="image/4.jpg" alt="Speaker 4">
+                </a>
+                <div class="speaker-name">Speaker 4</div>
+                <div class="speaker-org">Organization 4</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="organizers">
+        <h2>Organizers</h2>
+        <div class="people organizers-grid">
+            <div class="organizer">
+                <a href="#" target="_blank">
+                    <img src="image/1.jpg" alt="Organizer 1">
+                    <p><strong>Organizer 1</strong><br><span class="affiliation">Organization 1</span></p>
+                </a>
+            </div>
+            <div class="organizer">
+                <a href="#" target="_blank">
+                    <img src="image/2.jpg" alt="Organizer 2">
+                    <p><strong>Organizer 2</strong><br><span class="affiliation">Organization 2</span></p>
+                </a>
+            </div>
+            <div class="organizer">
+                <a href="#" target="_blank">
+                    <img src="image/3.jpg" alt="Organizer 3">
+                    <p><strong>Organizer 3</strong><br><span class="affiliation">Organization 3</span></p>
+                </a>
+            </div>
+            <div class="organizer">
+                <a href="#" target="_blank">
+                    <img src="image/4.jpg" alt="Organizer 4">
+                    <p><strong>Organizer 4</strong><br><span class="affiliation">Organization 4</span></p>
+                </a>
+            </div>
+            <div class="organizer">
+                <a href="#" target="_blank">
+                    <img src="image/5.jpg" alt="Organizer 5">
+                    <p><strong>Organizer 5</strong><br><span class="affiliation">Organization 5</span></p>
+                </a>
+            </div>
+            <div class="organizer">
+                <a href="#" target="_blank">
+                    <img src="image/6.jpg" alt="Organizer 6">
+                    <p><strong>Organizer 6</strong><br><span class="affiliation">Organization 6</span></p>
+                </a>
+            </div>
+            <div class="organizer">
+                <a href="#" target="_blank">
+                    <img src="image/7.jpg" alt="Organizer 7">
+                    <p><strong>Organizer 7</strong><br><span class="affiliation">Organization 7</span></p>
+                </a>
+            </div>
+            <div class="organizer">
+              <a href="#" target="_blank">
+                  <img src="image/8.jpg" alt="Organizer 8">
+                  <p><strong>Organizer 8</strong><br><span class="affiliation">Organization 8</span></p>
+              </a>
+            </div>
+            <div class="organizer">
+              <a href="#" target="_blank">
+                  <img src="image/9.jpg" alt="Organizer 9">
+                  <p><strong>Organizer 9</strong><br><span class="affiliation">Organization 9</span></p>
+              </a>
+            </div>
+            <div class="organizer">
+              <a href="#" target="_blank">
+                  <img src="image/10.jpg" alt="Organizer 10">
+                  <p><strong>Organizer 10</strong><br><span class="affiliation">Organization 10</span></p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p class="contact-email">Contact us at: <a href="#">Contact Email</a></p>
+    </section>
+
+    <footer>
+        &copy; The website template is adapted from the 
+        <a href="https://rss-workshop-2026.github.io/" target="_blank" rel="noopener" style="color: #fff;">Data-Centric Robotics Workshop @ RSS 2026</a>
+  
+  
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
