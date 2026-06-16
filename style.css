@@ -68,8 +68,8 @@ header {
     margin-top: 60px;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(234, 88, 12, 0.85), rgba(67, 20, 7, 0.9)), url('image/RSS2026-logo.jpg');
-    background-size: contain;
+    background: linear-gradient(rgba(67, 20, 7, 0.62), rgba(67, 20, 7, 0.72)), url('assets/austin.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #ea580c;
