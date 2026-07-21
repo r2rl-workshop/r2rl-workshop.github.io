@@ -123,6 +123,44 @@ section {
     border: 1px solid rgba(234, 88, 12, 0.08);
 }
 
+.workshop-highlight {
+    border-left: 6px solid var(--primary-orange);
+}
+
+.highlight-intro {
+    max-width: 900px;
+    margin: 0 auto 12px;
+    font-size: 1.12rem;
+}
+
+.highlight-list {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.highlight-list li {
+    margin-bottom: 10px;
+}
+
+.overview {
+    line-height: 1.72;
+}
+
+.overview-lead {
+    max-width: 900px;
+    margin: 0 auto 18px;
+}
+
+.overview-question {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-left: 4px solid var(--primary-orange);
+    background: #fff5eb;
+    border-radius: 6px;
+    font-size: 1.08rem;
+}
+
 footer {
     text-align: center;
     padding: 25px 20px;
