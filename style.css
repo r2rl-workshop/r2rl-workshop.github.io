@@ -72,17 +72,17 @@ body::before {
 /* Typography */
 h1 {
     font-size: 3.5rem;
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 700;
+    font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+    font-weight: 800;
     margin-bottom: 0;
     color: var(--panel);
     letter-spacing: -0.035em;
 }
 
 h2 {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 800;
     text-align: center;
     color: var(--em-deep);
     margin-bottom: 15px;
@@ -140,11 +140,10 @@ h3 {
 }
 
 .hero-brand {
-    font-family: 'Fraunces', Georgia, serif;
-    font-variation-settings: 'opsz' 144;
-    font-weight: 700;
-    font-size: clamp(2.8rem, 7.4vw, 5rem);
-    line-height: 0.95;
+    font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+    font-weight: 850;
+    font-size: clamp(2rem, 4.8vw, 3.35rem);
+    line-height: 1;
     letter-spacing: -0.045em;
     margin: 0 0 14px;
     color: var(--ink);
@@ -260,9 +259,6 @@ h3 {
         max-width: 880px;
     }
 
-    .unique-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
 @media (max-width: 540px) {
@@ -271,9 +267,6 @@ h3 {
         width: 100%;
     }
 
-    .unique-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 section {
@@ -492,32 +485,47 @@ p {
 }
 
 .unique-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 24px;
     list-style: none;
     padding: 0;
-    margin: 22px 0 18px;
+    margin: 36px 0 18px;
 }
 
 .unique-grid li {
-    min-height: 100%;
-    padding: 16px 14px;
-    background: var(--panel-tint);
-    border: 1px solid var(--rule-soft);
-    border-radius: var(--radius-inset);
-    box-shadow: var(--sh-soft);
+    position: relative;
+    box-sizing: border-box;
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+    padding: 28px;
+    background: var(--panel);
+    border: 1px solid var(--rule-faint);
+    border-radius: var(--radius-card);
+    box-shadow: var(--sh-card);
     color: var(--ink-soft);
-    font-size: 0.9rem;
-    line-height: 1.45;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.unique-grid li:last-child {
+    flex-basis: 100%;
+    max-width: 100%;
 }
 
 .unique-grid strong {
     display: block;
     margin-bottom: 8px;
-    color: var(--em-deep);
-    font-size: 1.15rem;
+    color: var(--em);
+    font-size: 1.14rem;
     line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+    .unique-grid li {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
 }
 
 a.link-text {
