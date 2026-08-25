@@ -5,33 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roadmap to Sample-Efficient Real-World Reinforcement Learning Workshop (R2RL)</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,700;1,9..144,900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-brand">R2RL Workshop @ CoRL 2026</a>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <div class="nav-links">
-                <a href="#overview">Overview</a>
-                <a href="#callforpapers">Call for Papers</a>
-                <a href="#schedule">Schedule</a>
-                <a href="#speakers">Speakers</a>
-                <a href="#organizers">Organizers</a>
-                <a href="#contact">Contact</a>
+    <nav class="sigma-spine" id="sigma-spine">
+        <div class="spine-inner">
+            <div class="spine-brand" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'});">
+                <span class="brand-mark">R2RL</span>
+            </div>
+            <div class="spine-track" id="spine-track">
+                <div class="spine-bar"></div>
+                <div class="spine-cursor" id="spine-cursor"></div>
+                <a class="spine-stop" href="#overview" style="--p:0%"><span class="dot"></span><span class="lbl">Overview</span></a>
+                <a class="spine-stop" href="#unique" style="--p:16.7%"><span class="dot"></span><span class="lbl">Unique</span></a>
+                <a class="spine-stop" href="#callforpapers" style="--p:33.3%"><span class="dot"></span><span class="lbl">CFP</span></a>
+                <a class="spine-stop" href="#schedule" style="--p:50%"><span class="dot"></span><span class="lbl">Schedule</span></a>
+                <a class="spine-stop" href="#speakers-and-breakout-leads" style="--p:66.7%"><span class="dot"></span><span class="lbl">Speakers</span></a>
+                <a class="spine-stop" href="#organizers" style="--p:83.3%"><span class="dot"></span><span class="lbl">Organizers</span></a>
+                <a class="spine-stop" href="#contact" style="--p:100%"><span class="dot"></span><span class="lbl">Contact</span></a>
+            </div>
+            <div class="spine-actions">
+                <span class="chip">CoRL 2026</span>
+                <span class="chip">Austin, TX</span>
+                <span class="chip">Nov 9</span>
             </div>
         </div>
     </nav>
 
-    <header>
-        <h1>Roadmap to Sample-Efficient Real-World Reinforcement Learning</h1>
+    <header class="hero">
+        <span class="hero-meta">R2RL Workshop <span class="dot-sep">·</span> CoRL 2026</span>
+        <h1 class="hero-brand">Roadmap to Sample-Efficient Real-World Reinforcement Learning</h1>
         <p class="hero-subtitle">What’s Standing Between Us and Real-World Deployment?</p>
-        <div class="hero-meta">
-            <span class="hero-badge">CoRL 2026 Workshop</span>
-            <span class="hero-badge">Austin, TX</span>
-            <span class="hero-badge">Nov 9, 2026</span>
+        <p class="hero-tagline">
+            A focused workshop on the bottlenecks, methods, and roadmap for making reinforcement learning practical on real hardware.
+        </p>
+        <div class="hero-venue">Austin, TX · November 9, 2026</div>
+        <div class="hero-quick-links">
+            <a class="qlink link-accent" href="#overview">Overview</a>
+            <a class="qlink link-accent" href="#callforpapers">Call for Papers</a>
+            <a class="qlink primary" href="#" target="_blank" rel="noopener">Submit</a>
+            <span class="qlink-aside">Half-day morning workshop</span>
         </div>
     </header>
 
@@ -43,8 +64,11 @@
           every trial on physical hardware requires both human supervision and wall-clock time. This workshop asks the community one focused question to address this challenge:
           <strong>What problems preclude making RL algorithms sample-efficient enough for real-world deployment and what should we focus on over the next few years to solve them?</strong>
         </p>
-        <h3>What makes this workshop unique?</h3>
-        <ul>
+    </section>
+
+    <section id="unique">
+        <h2>What makes this workshop unique?</h2>
+        <ul class="unique-grid">
             <li>
                 <strong>Early-career-only speakers (students and scientists):</strong>
                 The people actually running real-robot RL who are familiar with its bottlenecks through heavy experimentation.
@@ -72,45 +96,49 @@
         <h2>Call for Papers</h2>
         <div class="cfp-layout">
             <div class="cfp-main submission-content">
-            <h3>Topics of Interest</h3>
             <p>
                 We welcome submissions on sample-efficient real-world RL, 
                 especially work that identifies practical bottlenecks, reports lessons learned from 
                 real-robot experiments, or proposes methods that reduce the cost of learning on hardware.
                 Topics of interest include, but are not limited to:
             </p>
-            <ul>
-                <li>
-                    <strong>Supervision and Reward Cost:</strong> Methods for obtaining useful learning 
-                    signals cheaply, including learned reward models, human feedback, 
-                    human-in-the-loop interventions, and strategies for avoiding supervision as the bottleneck.
-                </li>
-                <li>
-                    <strong>Exploration and Safety on Hardware:</strong> Algorithms and systems for efficient 
-                    exploration under safety constraints, reset-free or autonomous RL, safe online 
-                    adaptation, and approaches that improve wall-clock efficiency during real-world training.
-                </li>
-                <li>
-                    <strong>Leveraging Priors for Real-World RL:</strong> Approaches that use pretrained policies, 
-                    VLAs, offline datasets, world models, or sim-to-real 
-                    transfer to reduce the number of required on-robot interactions.
-                </li>
-                <li>
-                    <strong>Post-Deployment Adaptation:</strong> Methods for finetuning deployed policies, 
-                    improving robustness to distribution shift, learning new behaviors from experience, and 
-                    adapting generalist policies without catastrophic forgetting.
-                </li>
-                <li>
-                    <strong>Long-Horizon and Contact-Rich RL:</strong> Techniques for improving sample efficiency 
-                    in long-horizon manipulation, dexterous control, contact-rich tasks, and settings with delayed 
-                    rewards, compounding errors, or difficult exploration.
-                </li>
-                <li>
-                    <strong>Benchmarks, Metrics, and Lessons Learned:</strong> Benchmarks, evaluation protocols, 
-                    shared platforms, negative results, system-level insights, and analysis of what worked, what 
-                    failed, and why in real-world RL experiments.
-                </li>
-            </ul>
+            <details class="topics-expandable">
+                <summary>Example Topics</summary>
+                <div class="topics-content">
+                    <ul>
+                        <li>
+                            <strong>Supervision and Reward Cost:</strong> Methods for obtaining useful learning 
+                            signals cheaply, including learned reward models, human feedback, 
+                            human-in-the-loop interventions, and strategies for avoiding supervision as the bottleneck.
+                        </li>
+                        <li>
+                            <strong>Exploration and Safety on Hardware:</strong> Algorithms and systems for efficient 
+                            exploration under safety constraints, reset-free or autonomous RL, safe online 
+                            adaptation, and approaches that improve wall-clock efficiency during real-world training.
+                        </li>
+                        <li>
+                            <strong>Leveraging Priors for Real-World RL:</strong> Approaches that use pretrained policies, 
+                            VLAs, offline datasets, world models, or sim-to-real 
+                            transfer to reduce the number of required on-robot interactions.
+                        </li>
+                        <li>
+                            <strong>Post-Deployment Adaptation:</strong> Methods for finetuning deployed policies, 
+                            improving robustness to distribution shift, learning new behaviors from experience, and 
+                            adapting generalist policies without catastrophic forgetting.
+                        </li>
+                        <li>
+                            <strong>Long-Horizon and Contact-Rich RL:</strong> Techniques for improving sample efficiency 
+                            in long-horizon manipulation, dexterous control, contact-rich tasks, and settings with delayed 
+                            rewards, compounding errors, or difficult exploration.
+                        </li>
+                        <li>
+                            <strong>Benchmarks, Metrics, and Lessons Learned:</strong> Benchmarks, evaluation protocols, 
+                            shared platforms, negative results, system-level insights, and analysis of what worked, what 
+                            failed, and why in real-world RL experiments.
+                        </li>
+                    </ul>
+                </div>
+            </details>
 
             <h3>Submission Guidelines</h3>
             <ul>
@@ -319,15 +347,104 @@
 
     <footer>
         &copy; The website template is adapted from the 
-        <a href="https://rss-workshop-2026.github.io/" target="_blank" rel="noopener" style="color: #fff;">Data-Centric Robotics Workshop @ RSS 2026</a>
+        <a href="https://rss-workshop-2026.github.io/" target="_blank" rel="noopener" style="color: var(--panel);">Data-Centric Robotics Workshop @ RSS 2026</a>
   
   
     </footer>
 
     <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
+        (function () {
+            var spine = document.getElementById('sigma-spine');
+            var cursor = document.getElementById('spine-cursor');
+            var stops = document.querySelectorAll('.spine-stop');
+            var sectionIds = ['overview', 'unique', 'callforpapers', 'schedule', 'speakers-and-breakout-leads', 'organizers', 'contact'];
+            var sections = sectionIds.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+
+            stops.forEach(function (s) {
+                s.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var t = document.querySelector(this.getAttribute('href'));
+                    if (t) {
+                        var top = t.getBoundingClientRect().top + window.scrollY - spine.offsetHeight - 12;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            function parsePct(s) { return parseFloat(s) || 0; }
+
+            function getSpineP() {
+                var spineH = spine.offsetHeight;
+                var anchor = spineH + 8;
+                var winY = window.scrollY;
+                var idx = -1;
+
+                for (var i = 0; i < sections.length; i++) {
+                    var r = sections[i].getBoundingClientRect();
+                    if (r.top - anchor <= 0) idx = i;
+                    else break;
+                }
+
+                if (idx === -1) {
+                    var first = sections[0];
+                    var ftop = first.getBoundingClientRect().top + winY - anchor;
+                    var frac = ftop > 0 ? Math.max(0, Math.min(1, winY / ftop)) : 1;
+                    return frac * parsePct(stops[0].style.getPropertyValue('--p'));
+                }
+
+                if (idx >= sections.length - 1) {
+                    var lastP = parsePct(stops[idx].style.getPropertyValue('--p'));
+                    var sec = sections[idx];
+                    var sTop = sec.getBoundingClientRect().top + winY - anchor;
+                    var sBot = sec.getBoundingClientRect().bottom + winY - anchor;
+                    var span = Math.max(1, sBot - sTop);
+                    var f = Math.max(0, Math.min(1, (winY - sTop) / span));
+                    return lastP + (100 - lastP) * f;
+                }
+
+                var p0 = parsePct(stops[idx].style.getPropertyValue('--p'));
+                var p1 = parsePct(stops[idx + 1].style.getPropertyValue('--p'));
+                var s0 = sections[idx].getBoundingClientRect().top + winY - anchor;
+                var s1 = sections[idx + 1].getBoundingClientRect().top + winY - anchor;
+                var span2 = Math.max(1, s1 - s0);
+                var f2 = Math.max(0, Math.min(1, (winY - s0) / span2));
+                return p0 + (p1 - p0) * f2;
+            }
+
+            function setActive() {
+                var spineH = spine.offsetHeight;
+                var anchor = spineH + 8;
+                var activeIdx = -1;
+
+                for (var i = 0; i < sections.length; i++) {
+                    var r = sections[i].getBoundingClientRect();
+                    if (r.top - anchor <= 0) activeIdx = i;
+                }
+
+                stops.forEach(function (s, i) {
+                    s.classList.toggle('active', i === activeIdx);
+                    s.classList.toggle('passed', i < activeIdx);
+                });
+            }
+
+            function tick() {
+                cursor.style.left = getSpineP() + '%';
+                setActive();
+            }
+
+            var raf = null;
+            function onScroll() {
+                if (raf) return;
+                raf = requestAnimationFrame(function () {
+                    tick();
+                    raf = null;
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', tick);
+            tick();
+        }());
     </script>
 
 </body>
