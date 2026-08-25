@@ -280,6 +280,30 @@ section {
     scroll-margin-top: calc(var(--spine-h) + 12px);
 }
 
+.overview-video {
+    display: block;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 24px;
+    object-fit: cover;
+    box-shadow: var(--sh-card-deep);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-question {
+    margin: 24px 0 4px;
+    padding: 24px 28px;
+    background: var(--amber-light);
+    border-left: 5px solid var(--em);
+    border-radius: var(--radius-inset);
+    box-shadow: var(--sh-soft);
+    color: var(--em-deep);
+    font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+    font-size: 1.12rem;
+    line-height: 1.5;
+}
+
 footer {
     text-align: center;
     padding: 25px 20px;
@@ -647,10 +671,10 @@ section strong {
 }
 
 .speaker-list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
-    justify-items: center;
     margin-top: 30px;
 }
 
@@ -1001,6 +1025,44 @@ section strong {
     border-bottom: 1px dotted var(--em);
 }
 
+.sponsorship-panel {
+    text-align: center;
+    background: var(--em-deep);
+    border-color: var(--em-deep);
+    box-shadow: var(--sh-emerald);
+}
+
+.sponsorship-panel h2 {
+    color: var(--panel);
+}
+
+.sponsor-intro {
+    margin: 20px 0 8px;
+    color: var(--em-light);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sponsor-name {
+    display: inline-block;
+    color: var(--amber-light);
+    font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+    font-size: 3rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sponsor-name:hover,
+.sponsor-name:focus-visible {
+    color: var(--panel);
+    transform: translateY(-3px);
+}
+
 /* Media Queries */
 @media(max-width: 768px) {
     :root {
@@ -1087,3 +1149,4 @@ section strong {
     text-align: center;
     margin-top: 20px;
 }
+
