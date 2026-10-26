@@ -25,11 +25,12 @@
                 <div class="spine-bar"></div>
                 <div class="spine-cursor" id="spine-cursor"></div>
                 <a class="spine-stop" href="#overview" style="--p:0%"><span class="dot"></span><span class="lbl">Overview</span></a>
-                <a class="spine-stop" href="#unique" style="--p:16.7%"><span class="dot"></span><span class="lbl">Unique</span></a>
-                <a class="spine-stop" href="#speakers-and-breakout-leads" style="--p:33.3%"><span class="dot"></span><span class="lbl">Speakers</span></a>
-                <a class="spine-stop" href="#schedule" style="--p:50%"><span class="dot"></span><span class="lbl">Schedule</span></a>
-                <a class="spine-stop" href="#callforpapers" style="--p:66.7%"><span class="dot"></span><span class="lbl">CFP</span></a>
-                <a class="spine-stop" href="#organizers" style="--p:83.3%"><span class="dot"></span><span class="lbl">Organizers</span></a>
+                <a class="spine-stop" href="#unique" style="--p:14.3%"><span class="dot"></span><span class="lbl">Unique</span></a>
+                <a class="spine-stop" href="#speakers-and-breakout-leads" style="--p:28.6%"><span class="dot"></span><span class="lbl">Speakers</span></a>
+                <a class="spine-stop" href="#schedule" style="--p:42.9%"><span class="dot"></span><span class="lbl">Schedule</span></a>
+                <a class="spine-stop" href="#callforpapers" style="--p:57.1%"><span class="dot"></span><span class="lbl">CFP</span></a>
+                <a class="spine-stop" href="#accepted-papers" style="--p:71.4%"><span class="dot"></span><span class="lbl">Accepted Papers</span></a>
+                <a class="spine-stop" href="#organizers" style="--p:85.7%"><span class="dot"></span><span class="lbl">Organizers</span></a>
                 <a class="spine-stop" href="#contact" style="--p:100%"><span class="dot"></span><span class="lbl">Contact</span></a>
             </div>
             <div class="spine-actions">
@@ -506,7 +507,7 @@
             var spine = document.getElementById('sigma-spine');
             var cursor = document.getElementById('spine-cursor');
             var stops = document.querySelectorAll('.spine-stop');
-            var sectionIds = ['overview', 'unique', 'speakers-and-breakout-leads', 'schedule', 'callforpapers', 'organizers', 'contact'];
+            var sectionIds = ['overview', 'unique', 'speakers-and-breakout-leads', 'schedule', 'callforpapers', 'accepted-papers', 'organizers', 'contact'];
             var sections = sectionIds.map(function (id) { return document.getElementById(id); }).filter(Boolean);
 
             stops.forEach(function (s) {
