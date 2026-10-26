@@ -434,8 +434,9 @@ footer {
 .spine-stop .lbl {
     position: absolute;
     top: 14px;
-    opacity: 0;
-    transform: translateY(-2px);
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%);
     transition: opacity 0.2s, transform 0.2s;
     background: var(--ink);
     color: var(--bg);
@@ -446,7 +447,7 @@ footer {
 
 .spine-stop:hover .lbl {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%);
 }
 
 .spine-stop:hover .dot {
@@ -1088,7 +1089,8 @@ section strong {
     }
 
     .spine-stop .lbl {
-        display: none;
+        font-size: 0.55rem;
+        padding: 2px 6px;
     }
 
     .spine-actions {
