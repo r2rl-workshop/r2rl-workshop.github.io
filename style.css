@@ -1182,9 +1182,8 @@ section strong {
     text-decoration: none;
 }
 .paper-title:hover {
-    color: var(--em);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    color: var(--em-deep);
+    text-decoration: none;
 }
 .paper-badge {
     display: inline-block;
@@ -1206,4 +1205,53 @@ section strong {
     color: var(--ink-soft);
     font-size: 0.98rem;
     line-height: 1.5;
+}
+
+/* Accepted Papers toggle */
+.papers-expandable {
+    margin: 10px 0;
+    background: var(--panel-tint);
+    border: 1px solid var(--rule-soft);
+    border-radius: var(--radius-card);
+    box-shadow: var(--sh-soft);
+    overflow: hidden;
+}
+.papers-expandable summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    color: var(--em-deep);
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    list-style: none;
+}
+.papers-expandable summary::-webkit-details-marker {
+    display: none;
+}
+.papers-expandable summary::after {
+    content: "+";
+    color: var(--walnut);
+    font-size: 1rem;
+    line-height: 1;
+}
+.papers-expandable[open] summary {
+    border-bottom: 1px solid var(--rule-soft);
+}
+.papers-expandable[open] summary::after {
+    content: "−";
+}
+.papers-content {
+    padding: 8px 20px 20px;
+}
+#accepted-papers .papers-content h3:first-child {
+    margin-top: 12px;
+}
+.paper-title {
+    cursor: default;
 }
