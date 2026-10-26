@@ -27,7 +27,7 @@
     --sh-emerald: 0 8px 26px rgba(29, 69, 48, 0.22);
     --radius-card: 14px;
     --radius-inset: 10px;
-    --spine-h: 60px;
+    --spine-h: 84px;
 
     /* Compatibility aliases for the existing site selectors. */
     --primary-orange: var(--em);
@@ -1067,7 +1067,7 @@ section strong {
 /* Media Queries */
 @media(max-width: 768px) {
     :root {
-        --spine-h: 52px;
+        --spine-h: 72px;
     }
 
     .hero {
