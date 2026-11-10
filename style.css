@@ -733,6 +733,91 @@ section strong {
     line-height: 1.4;
 }
 
+/* Speaker talk-abstract hover tooltip (Zhanyi Sun). Hidden until hover or
+   keyboard focus, so the abstract does not crowd the speaker row; on touch
+   screens it expands in place instead, since there is no hover. */
+.speaker-card {
+    position: relative;
+}
+
+.speaker-card:focus-visible {
+    outline: 2px solid var(--em);
+    outline-offset: 6px;
+    border-radius: var(--radius-inset);
+}
+
+.speaker-abstract-hint {
+    margin-top: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+}
+
+.speaker-abstract {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translate(-50%, 6px);
+    width: min(360px, 88vw);
+    padding: 16px 18px;
+    background: var(--panel);
+    border: 1px solid var(--rule-soft);
+    border-top: 3px solid var(--em);
+    border-radius: var(--radius-card);
+    box-shadow: var(--sh-card-deep);
+    text-align: left;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    z-index: 50;
+}
+
+.speaker-abstract strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--em-deep);
+    font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+    font-size: 0.98rem;
+}
+
+.speaker-abstract p {
+    margin: 0;
+}
+
+.speaker-card:hover .speaker-abstract,
+.speaker-card:focus-within .speaker-abstract {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .speaker-abstract {
+        position: static;
+        display: none;
+        width: auto;
+        max-width: none;
+        margin-top: 12px;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .speaker-card:hover .speaker-abstract,
+    .speaker-card:focus-within .speaker-abstract {
+        display: block;
+        transform: none;
+    }
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
