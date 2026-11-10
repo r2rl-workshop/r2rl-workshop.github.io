@@ -691,6 +691,11 @@ section strong {
 .speaker-card:hover,
 .speaker-card:focus-within {
     transform: translateY(-5px);
+    /* Lift the whole card above later cards: the hover transform creates a
+       stacking context, so the tooltip's own z-index can't escape it, and
+       later position:relative cards (e.g. Rickmer's, below) would otherwise
+       paint over the tooltip. */
+    z-index: 100;
 }
 
 .speaker-photo {
